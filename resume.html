@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume</title>
+    <style>
+       h1 {
+        text-align: center;
+        color: rgb(34, 20, 162);
+        text-shadow: 2px 2px 4px gray;
+}
+        div{
+            background-color: rgb(243, 243, 243);
+        }
+        h2{
+            color: rgb(30, 19, 122);
+
+        }
+        .title{
+            text-align: center;
+        }
+        .lef{
+            display: flex;
+        }
+        .side{
+            background-color: black;
+        }
+        p{
+            font-size: 115%;
+        }
+        h2 {
+            border-bottom: 2px solid #222;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .contact{
+            text-align: center;
+        }
+        .social{
+            text-align: center;
+        }
+        img {
+            border-radius: 50%;
+            border: 3px solid rgb(208, 208, 245);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 60%;
+        }
+        button {
+            background-color: rgb(94, 94, 241);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: rgb(32, 32, 156);
+        }
+        toggle {
+            text-align: center;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        .img {
+            text-align: center;
+            padding: 10px;
+        }
+        .dark {
+            background-color: black;
+            color: white;
+        }
+        .dark div {
+            background-color: #222;
+        }
+        .dark h1, .dark h2 {
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>SHEK AZEMA NAVAS I</h1>
+
+    <div class="img">
+        <img id="img" src="Navas.jpeg" width="200">
+        <br>
+        <button id="hide">Hide</button>
+        <button id="theme">Dark Theme</button>
+    </div>
+
+    <p class="title">software Developer | full stack Developer</p>
+    
+    <div class="contact">
+        <span><a href="shekazemanavas@gmail.com">
+            shekazemanavas@gmail.com
+        </a></span>
+        <span>☎ +91 7904990981</span>
+        <span>📍 Chennai, Tamil Nadu, India</span>
+    </div>
+
+    <div class="social">
+        <a href="https://linkedin.com/in/shek-azema-navas-i-1b760a2a4">
+            LinkedIn</a>
+        <a href="https://github.com/SHEKAZEMANAVAS-07">
+            GitHub
+        </a>
+        
+    </div>    
+    <h2>SUMMARY</h2>
+
+    <p>Final-year Computer Science Engineering student with hands-on experience in software and full stack web development.Skilled in HTML, CSS, JavaScript, Java, and Python, with a passion for building user-friendly applications and solving real-world problems.Strong team player with a willingness to learn and adapt to new technologies. Seeking an opportunity to grow as a Software Developer.</p>
+
+    <h2>EDUCATION</h2>
+
+    <p><b>B.E CSE</b>,S.A Engineering college<br>B.E in Computer Science and Engineering<br>CGPA:7.47</p>
+
+    <P><b>HSC&SSLC</b>,sethu bhaskara matr hr sec school<br>SSLC:ALL PASS<br>HSC:73.16%</P>
+
+    <h2>PROFESSIONAL EXPERIENCE</h2>
+
+    <p><b>Full Stack Development</b>,IAT TECHNOLOGIES As a Full Stack Developer Intern, I worked on developing responsive web applications by building front-end interfaces, back-end features, and managing databases. I gained hands-on experience by contributing to real-world projects and strengthening my full stack development skills.</p>
+
+    <h2>PROJECTS</h2>
+    <ul>
+    <li><b>Event Management Website</b>,HTML, CSS, JavaScript <br>Developed a responsive event management website that allows users to browse events, view detailed event information, and register through an intuitive and user-friendly interface.</li>
+    <br>
+    <li><b>Game selling website</b>, HTML, CSS, JavaScript Developed a responsive e-commerce website that enables users to browse games, explore product details, and experience a smooth and user-friendly online shopping journey.</li>
+    <br>
+    <li><b>Smart Queue management system</b>, HTML,CSS,JavaScript,MongoDB Developed a smart queue management system that enables users to book appointments, generate digital tokens, and track live queue status, improving efficiency and reducing waiting time through a user-friendly interface.</li>
+    </ul>
+    <h2>CERTIFICATE</h2>
+    <ul>
+        <li>Infosys springboard-c certified programmer</li>
+        <br>
+        <li>Cisco-python certified programmer</li>
+        <br>
+        <li>InfosysSpringboard Frontend Development certification</li>
+    </ul>
+    <h2>TECH SKILLS</h2>
+    <ul>
+        <li>Web development</li>
+        <li>UI/UX designing</li>
+        <li>HTML/CSS</li>
+    </ul>
+    <h2>PROGRAMMING LANGUAGES</h2>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+    </ul>
+</div>
+ <button id="count"><a href="SHEK AZEMA NAVAS I(Resume).pdf" target="_blank" >Download Resume</a></button>
+ <label id="label">0</label>
+</body>
+<script>
+     var count=0;
+     var boolean;
+    const button=document.getElementById('count');
+    const label=document.getElementById('label');
+    button.addEventListener('click', function(){
+            count=count+1;
+            label.textContent = count;;    
+        })
+        var boolean = true;
+        var dark = false;
+        const img = document.getElementById('img');
+        const hide = document.getElementById('hide');
+        const theme = document.getElementById('theme');
+        hide.addEventListener('click', function() {
+            boolean = !boolean;
+            img.style.display = boolean ? 'block' : 'none';
+            hide.textContent = boolean ? 'Hide' : 'Show';
+        });
+        theme.addEventListener('click', function() {
+            dark = !dark;
+            document.body.classList.toggle('dark');
+            theme.textContent = dark ? 'Normal Theme' : 'Dark Theme';
+    });
+</script>
+</html>
